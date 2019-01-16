@@ -29,6 +29,11 @@ https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-
 
 ## Example 
 
+An interactive example can be found in the ```example.ipynb``` file, that can also be viewed in this [link](https://nbviewer.jupyter.org/github/luizgh/adversarial_signatures/blob/master/example.ipynb). This example considers the following tasks:
+
+1. Extracting features and training a WD classifier for a user
+2. Perform a type-I attack (change a genuine signature so that it is rejected)
+3. Perform a type-II attack (change a skilled forgery so that it is accepted)
 
 
 ## Reproducing the paper
