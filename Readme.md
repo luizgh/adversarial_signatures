@@ -58,11 +58,11 @@ The scripts ```scripts/process_results.sh``` and ```scripts/process_results_[def
 
 Below are the trained CNN models that were used in this paper:
 
-* [SigNet](https://storage.googleapis.com/luizgh-datasets/pytorch_models/signet.pth) (from [4])
-* [SigNet 350-615](https://storage.googleapis.com/luizgh-datasets/pytorch_models/signet_350_615.pth): trained with GPDS users [350, 615)
-* [SigNet Madry 350-615](https://storage.googleapis.com/luizgh-datasets/pytorch_models/signet_350_615_madry_norm_2.pth): trained with GPDS users [350, 615) using the Madry defense [2]
-* [SigNet Ens Adv 350-615](https://storage.googleapis.com/luizgh-datasets/pytorch_models/signet_350_615_ensadv_norm5.pth): trained with GPDS users [350, 615) using Ensemble Adversarial Training [3]
-* [SigNet 615-881](https://storage.googleapis.com/luizgh-datasets/pytorch_models/signet_615_881.pth): trained with GPDS users [615, 881)
+* [SigNet](https://drive.google.com/open?id=1l8NFdxSvQSLb2QTv71E6bKcTgvShKPpx) (from [4])
+* [SigNet 350-615](https://drive.google.com/open?id=1azNUKeF6oglxLrWwBCVMCw1hUqNI_7Zs): trained with GPDS users [350, 615)
+* [SigNet Madry 350-615](https://drive.google.com/open?id=153oytoOPifDi0sHzIAcO-cOFXzVsaDF3): trained with GPDS users [350, 615) using the Madry defense [2]
+* [SigNet Ens Adv 350-615](https://drive.google.com/open?id=1HxERO_21qimM2QSXySnckJIewlM1GD4Y): trained with GPDS users [350, 615) using Ensemble Adversarial Training [3]
+* [SigNet 615-881](https://drive.google.com/open?id=1G0sEZqu15Gcl6LDrETHhNHZ7L-Po_wGO): trained with GPDS users [615, 881)
 
 [4] Hafemann, Luiz G., Robert Sabourin, and Luiz S. Oliveira. "Learning Features for Offline Handwritten Signature Verification using Deep Convolutional Neural Networks" http://dx.doi.org/10.1016/j.patcog.2017.05.012 ([preprint](https://arxiv.org/abs/1705.05787))
 
