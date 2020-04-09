@@ -23,6 +23,8 @@ Download (or clone) this repository and install its requirements:
 pip install requirements.txt
 ```
 
+Download this repository: https://github.com/carlini/nn_robust_attacks. Add the path where this is downloaded to the `PYTHONPATH` environment variable.
+
 For the LBP experiments, you need to have Matlab installed, and install the python/matlab integration:
 
 https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html
