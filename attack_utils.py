@@ -3,7 +3,8 @@ import torch
 
 from attacks.anneal import AdversaryAttackProblem
 from attacks.carlini import CarliniWagnerL2
-
+from foolbox.attacks import BoundaryAttack
+from foolbox.criteria import TargetClass
 
 def carlini_attack(model, img, target_class, device):
     img_01 = (img / 255).astype(np.float32)

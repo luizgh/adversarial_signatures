@@ -168,6 +168,7 @@ if __name__ == '__main__':
 
                 m_foolbox = foolbox.models.PyTorchModel(m_two_outputs,
                                                         bounds=(0, 1),
+                                                        num_classes=2,
                                                         device=device)
 
                 m_anneal = ModelForAnneal(m, device)
