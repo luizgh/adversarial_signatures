@@ -6,7 +6,8 @@ torchvision >= 0.2.1
 git+git://github.com/luizgh/visdom_logger#egg=visdom_logger
 scikit-learn
 scikit-image
-foolbox
+foolbox==1.8.0
+randomgen==1.6.2
 simanneal
 cleverhans
 randomgen
