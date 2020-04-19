@@ -3,7 +3,6 @@ import numpy as np
 import torch
 from sigver.preprocessing.normalize import crop_center
 
-from clbp.clbp import CLBP
 from sigver.datasets.util import load_dataset
 from sigver.featurelearning.data import extract_features
 from sigver.featurelearning.models.signet import SigNet
@@ -15,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('--data-path', required=True)
     parser.add_argument('--weights-path', required=True)
     parser.add_argument('--save-path-signet', required=True)
-    parser.add_argument('--save-path-lbp', required=True)
+    parser.add_argument('--save-path-lbp')
 
     args = parser.parse_args()
 
@@ -42,17 +41,15 @@ if __name__ == '__main__':
     batch_size = 32
     input_size = (150, 220)
     cnn_features = extract_features(x, process_fn, batch_size, input_size)
-
-    print('Extracting CLBP features')
-    descriptor = CLBP()
-    lbp_features = []
-    for img in tqdm(x):
-        img = crop_center(img.squeeze(), input_size)
-        lbp_features.append(descriptor(img))
-    lbp_features = np.concatenate(lbp_features)
-
-    print(lbp_features.shape)
-
     np.save(args.save_path_signet, cnn_features)
-    np.save(args.save_path_lbp, lbp_features)
 
+    if args.save_path_lbp is not None:
+        from clbp.clbp import CLBP
+        print('Extracting CLBP features')
+        descriptor = CLBP()
+        lbp_features = []
+        for img in tqdm(x):
+            img = crop_center(img.squeeze(), input_size)
+            lbp_features.append(descriptor(img))
+        lbp_features = np.concatenate(lbp_features)
+        np.save(args.save_path_lbp, lbp_features)
